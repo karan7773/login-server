@@ -2,10 +2,6 @@ const User=require('../model/UserModel')
 const {hashPassword,comparePassword}=require('../helpers/auth')
 const jwt=require('jsonwebtoken');  
 
-// const test=(req,res)=>{
-//     res.json('working')
-// }
-
 const registerUser=async (req,res)=>{
     try{
         const {name,email,password}=req.body;
@@ -96,8 +92,11 @@ const getPrfile=(req,res)=>{
     }
 }
 
+// const signInwithGoogle=(req,res)=>{
+
+// }
+
 module.exports={
-    // test,
     registerUser,
     loginUser,
     getPrfile
